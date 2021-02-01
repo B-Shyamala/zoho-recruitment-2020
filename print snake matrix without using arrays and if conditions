@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class snakePattern {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int col_range = n * 2;
+		int c = 1, k = 1, t = n;
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= col_range - i; j++) {
+				while (k != t) {
+					System.out.print(" ");
+					k++;
+					j++;
+				}
+				System.out.print(c + " ");
+				c++;
+			}
+			k = 1;
+			t = t - 1;
+			System.out.println();
+		}
+	}
+}
